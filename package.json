@@ -1,0 +1,12 @@
+{
+  "name": "bolt-preflight-check",
+  "version": "1.0.0",
+  "description": "A small demo: catch an AI-generated JS module's 'looks right but calls something undefined' bugs before they ship, by actually running a smoke test against it in a sandbox rather than trusting it on sight.",
+  "main": "lib/pipeline.js",
+  "scripts": {
+    "test": "node --test",
+    "demo:good": "node lib/pipeline.js fixtures/good-greeting-module.js fixtures/greeting-module.smoketest.js",
+    "demo:broken": "node lib/pipeline.js fixtures/broken-greeting-module.js fixtures/greeting-module.smoketest.js"
+  },
+  "license": "MIT"
+}
