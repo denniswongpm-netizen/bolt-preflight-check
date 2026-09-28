@@ -1,9 +1,9 @@
 # bolt-preflight-check
 
-A small demo built after applying for StackBlitz's Staff PM role on Bolt.new, aimed at Bolt.new's
-own most-cited failure mode: AI-generated code that **looks right but calls something that was
-never actually defined** — reviewers report Bolt burning up to half a user's tokens re-writing
-files to fix bugs it introduced itself, often exactly this shape of bug.
+A small demo aimed at one of the most-cited failure modes across AI app-builder tools: AI-generated
+code that **looks right but calls something that was never actually defined** — reviewers of
+several prompt-to-app tools report burning up to half their tokens on the tool re-writing files to
+fix bugs it introduced itself, often exactly this shape of bug.
 
 ## Why a "looks right" check has to actually run the code
 
@@ -52,13 +52,13 @@ Real output from `demo:broken`:
 
 ## Where this pattern comes from
 
-Same underlying discipline as a second demo I built for a different application
-([transcript-copilot](https://github.com/denniswongpm-netizen/tactiq-transcript-copilot)): a
+Same underlying discipline as a second, smaller demo I built,
+[transcript-copilot](https://github.com/denniswongpm-netizen/tactiq-transcript-copilot): a
 generated artifact's claims aren't trusted because they read correctly — they're independently
 re-checked against reality, and the check reports exactly what it found, not just true/false. I
 used the same principle building an AI-orchestrated platform end-to-end, where every generated
 artifact runs through a comparable check before a human ever reviews it. This repo is that same
-idea, pointed at Bolt.new's own domain instead.
+idea, pointed at AI-generated code instead.
 
 — Dennis Wong
 [linkedin.com/in/denniswongpm](https://linkedin.com/in/denniswongpm)
